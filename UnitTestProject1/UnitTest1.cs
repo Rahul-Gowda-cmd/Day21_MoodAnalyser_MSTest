@@ -67,7 +67,17 @@ namespace UnitTestProject1
             }
 
         }
-        
+        //Testcase 4.1
+        [TestMethod]
+        public void GivenMoodAnalyseClassName_ShouldReturnMoodAnalyseObject()
+        {
+            string message = null;
+            object expected = new MoodAnalyser1(message);
+            object obj = MoodAnalyserFactory.CreateMoodAnalyser("MoodAnalyser.MoodAnalyser1", "MoodAnalyser1");
+            expected.Equals(obj);
+
+        }
+
     }
 }
 
